@@ -1,9 +1,31 @@
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
   const location = window.location.href;
   const url = location.replace('https://redirect-dating.vercel.app/', '')
   const re = `https://olympusmedia.us/${url}`
+
+  useEffect(() => {
+    const getCount = async () => {
+      fetch('https://66e15506c831c8811b548c9a.mockapi.io/traffic', { method: 'GET' })
+        .then(res => res.json())
+        .then(data => {
+          let count = data[0]?.count;
+          count += 1;
+          fetch('https://66e15506c831c8811b548c9a.mockapi.io/traffic/1', {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              count: count
+            })
+          })
+        });
+    }
+    getCount();
+  }, [])
 
   return (
     <div className="App">
