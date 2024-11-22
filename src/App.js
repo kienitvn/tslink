@@ -2,9 +2,12 @@ import { useEffect } from 'react';
 import './App.css';
 
 function App() {
+
   useEffect(() => {
     setTimeout(() => {
-      window.location.href = `https://olympusmedia.us/compilation-of-47-uncensored-full-hd-photos-of-onlyfans-superstars-los2211/`
+      const location = window.location.href;
+      const url = location.replace('https://redirect-dating.vercel.app/', '')
+      window.location.href = `https://olympusmedia.us/${url}`
     }, 1000)
   }, [])
 
