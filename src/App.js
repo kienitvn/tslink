@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 
+
 function App() {
   const location = window.location.href;
   const url = location.replace('https://redirect-dating.vercel.app/', '')
