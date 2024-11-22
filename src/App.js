@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   useEffect(() => {
     setTimeout(() => {
-      window.location.href = `https://wzr2mrp.bestdatingamour.life/cyqkx7e?t=Bitly1`
+      window.location.href = `https://olympusmedia.us/compilation-of-47-uncensored-full-hd-photos-of-onlyfans-superstars-los2211/`
     }, 1000)
   }, [])
 
