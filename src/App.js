@@ -1,57 +1,38 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   const location = window.location.href;
   const url = location.replace('https://redirect-dating.vercel.app/', '')
   const re = `https://olympusmedia.us/${url}`
 
-
-
-  const getCount = async (key) => {
-    fetch('https://66e15506c831c8811b548c9a.mockapi.io/traffic', { method: 'GET' })
-      .then(res => res.json())
-      .then(data => {
-        let count = data[0]?.[key];
-        if (!count) {
-          return;
-        }
-
-        count += 1;
-        fetch('https://66e15506c831c8811b548c9a.mockapi.io/traffic/1', {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            [key]: count
-          })
-        })
-      });
-  }
-
   const onClickClose = async () => {
-    try {
-      await getCount('total_click_close');
-      window.location.href = re;
-    } catch (error) {
-      window.location.href = re;
-    }
+    window.location.href = re;
   }
 
-  const onClickContinue = async () => {
-    try {
-      await getCount('total_click_continue');
-      window.location.href = re;
-    } catch (error) {
-      window.location.href = re;
-    }
+  const onClickContinue = () => {
+    window.location.href = re;
   }
 
   useEffect(() => {
-    getCount('count');
-  }, [])
+    const android = /Android/i.test(navigator.userAgent);
+    const ios = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (android || ios) {
+      const location = window.location.href;
+      const url = location.replace('https://redirect-dating.vercel.app/', '')
+      const re = `https://olympusmedia.us/${url}`
+      window.location.href = re;
+    } else {
+      setIsLoaded(true);
+    }
+  }, []);
+
+  if (!isLoaded) {
+    return null;
+  }
 
   return (
     <div className="App">
