@@ -1,7 +1,7 @@
 function App() {
 
   const location = window.location.href;
-  const url = location.replace('https://olympusmedia.vercel.app/', '')
+  const url = location.replace('https://olymteam.vercel.app/', '')
   const re = `https://content4mix.com/${url}`
 
   const onClickClose = async () => {
