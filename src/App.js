@@ -1,8 +1,4 @@
-import { useEffect, useState } from 'react';
-
-
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
 
   const location = window.location.href;
   const url = location.replace('https://olympusmedia.vercel.app/', '')
@@ -14,23 +10,6 @@ function App() {
 
   const onClickContinue = () => {
     window.location.href = re;
-  }
-
-  useEffect(() => {
-    const android = /Android/i.test(navigator.userAgent);
-    const ios = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (android || ios) {
-      const location = window.location.href;
-      const url = location.replace('https://olympusmedia.vercel.app/', '')
-      const re = `https://content4mix.com/${url}`
-      window.location.href = re;
-    } else {
-      setIsLoaded(true);
-    }
-  }, []);
-
-  if (!isLoaded) {
-    return null;
   }
 
   return (
