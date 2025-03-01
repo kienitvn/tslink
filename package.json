@@ -36,9 +36,3 @@
     ]
   }
 }
-{
-  "dependencies": {
-    "react-router-dom": "^6.x.x",
-    // other dependencies...
-  }
-}
