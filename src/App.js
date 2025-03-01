@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { Routes } from "react-router"
+import { Routes } from "react-router-dom"
 function App() {
   const local = useLocation();
   console.log(local.pathname);
