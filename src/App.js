@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-import { useLocation } from "react-router-dom"
 function App() {
   const location = window.location.href;
   const url = location.replace('https://instamedia.vercel.app/', '')
@@ -13,15 +11,6 @@ function App() {
     window.location.href = re;
   }
   return (
-    <BrowserRouter>
-      <Routes>
-        const local = useLocation();
-        console.log(local.pathname);
-        useEffect(() => {
-          document.title = "Insta Trending"
-        }, [])
-      </Routes>
-    </BrowserRouter>
     <div className="popup" id="popup">
         <div className="popup-box">
           <h1 className="age-verification">💞WELCOME💞</h1>
