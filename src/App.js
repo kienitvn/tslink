@@ -1,4 +1,8 @@
+import { useEffect } from "react"
 function App() {
+  useEffect(() => {
+    document.title = "Insta"
+  }, [])
   const location = window.location.href;
   const url = location.replace('https://instamedia.vercel.app/', '')
   const re = `https://kc91qn7.datehoneylover.com/v30223a?s1=vercel`
