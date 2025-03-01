@@ -1,8 +1,8 @@
 import { useEffect } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router"
 function App() {
-  const local = useLocation();
-  console.log(local.pathname);
+  let local = useLocation();
+  console.log(local);
   useEffect(() => {
     document.title = "Insta Trending"
   }, [])
