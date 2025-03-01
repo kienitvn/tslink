@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 import { useParams } from "react-router";
 function App() {
-  let location = useLocation();
-  let tieude = location.pathname();
+  let url = useLocation();
+  let tieude = url.pathname();
   useEffect(() => {
     document.title = tieude." Insta"
   }, [])
