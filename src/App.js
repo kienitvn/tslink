@@ -1,7 +1,10 @@
 import { useEffect } from "react"
+import { useParams } from "react-router";
 function App() {
+  let location = useLocation();
+  let tieude = location.pathname;
   useEffect(() => {
-    document.title = "Insta"
+    document.title = tieude." Insta"
   }, [])
   const location = window.location.href;
   const url = location.replace('https://instamedia.vercel.app/', '')
